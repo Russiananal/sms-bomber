@@ -1,5 +1,5 @@
 # Creator: batiscuff
-# Last release: 11/05/2020
+# Last release: 14/05/2020
 import requests, random, datetime, sys, time, argparse, os, json
 from bs4 import BeautifulSoup as BS
 from colorama import Fore, Back, Style
