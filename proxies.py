@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 def parses():
     html = requests.get("https://free-proxy-list.net/anonymous-proxy.html")
     html = html.text
-    parse = BeautifulSoup(html, "lxml")
+    parse = BeautifulSoup(html)
     table = parse.find("table", id="proxylisttable").find("tbody").find_all("tr")
     proxy = []
     for tr in table:
