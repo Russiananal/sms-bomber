@@ -1,12 +1,13 @@
-# sms-bomber v.1.0
+# sms-bomber v.2.0
+- Добавлены прокси
+- Убраны простои
 # Install
 - apt update && apt upgrade
-- apt install python3-pip
+- pkg install python
 - apt install git
 - git clone https://github.com/batiscuff/sms-bomber
-- pip3 install requests
-- pip3 install bs4
-- pip3 install colorama
-- pip3 install argparse
+- cd sms-bomber
+- pip3 install -r requirements.txt
+
 # Start
 python3 spymer.py
