@@ -17,9 +17,7 @@ def get_proxy():
        data=p.readline()
     return data
 os.environ['HTTP_PROXY'] = os.environ['http_proxy'] = f'{get_proxy()}'
-
 os.system("clear")
-print(banner)
 
 def check_number():
     global phone
