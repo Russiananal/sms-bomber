@@ -13,9 +13,10 @@ fail = (Fore.YELLOW+Style.BRIGHT+"[-] "+
 
 def get_proxy():
     proxies.parses()
-    with open("proxy.txt", "r") as p:
-       data=p.readline()
-    return data
+    with open("proxy.txt", "r+", encoding="utf-8") as p:
+        data=p.readlines()
+        proxy=re.sub(r"\n", "", random.choice(data))
+    return proxy
 os.environ['HTTP_PROXY'] = os.environ['http_proxy'] = f'{get_proxy()}'
 os.system("clear")
 
