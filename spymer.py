@@ -160,6 +160,8 @@ def start():
         except:
             print(fail + "Kasta не отправлен" + Style.RESET_ALL)
         try:
+            
+        try:
             requests.post(
                 "https://izi.ua/api/auth/register",
                 json={
